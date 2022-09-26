@@ -1,0 +1,13 @@
+{
+	"Name": "Hash",
+	"Implements": [
+		"hash"
+	],
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": "/// <summary>\n/// @CSharpLua.Template = \"hash({0})\"\n/// </summary>\npublic Hash(string v)\n{\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"hash({0})\"\n/// </summary>\npublic static implicit operator Hash(string v)\n{\n   //Doesn't actually get called.  Instead the template is injected.  But we can't extern operators.\n   return Defold.hash(v);\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator string(Hash v)\n{\n   //Doesn't actually get called.  Instead the template is injected.  But we can't extern operators.\n   return v.ToString();\n}\n\n\n\n/// <summary>\n/// @CSharpLua.Template = \"{this}\"\n/// </summary>\npublic extern override string ToString();"
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

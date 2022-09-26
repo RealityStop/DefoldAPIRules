@@ -1,0 +1,15 @@
+{
+	"Name": "FaceType",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"FACE_FRONT": 0,
+			"FACE_BACK": 1,
+			"FACE_FRONT_AND_BACK": 2
+			
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

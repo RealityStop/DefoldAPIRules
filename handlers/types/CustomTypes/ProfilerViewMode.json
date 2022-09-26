@@ -1,0 +1,13 @@
+{
+	"Name": "ProfilerViewMode",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"VIEW_MODE_FULL": 1,
+			"VIEW_MODE_MINIMIZED": 2
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

@@ -1,0 +1,115 @@
+{
+	"namespace": "render",
+	"Overrides": {
+		"Methods": {
+			"enable_state": [{
+				"TargetParameterCount": 1,
+				"parameters": [{
+					"name": "state",
+					"doc": "state to enable\n<ul>\n<li><code>render.STATE_DEPTH_TEST</code></li>\n<li><code>render.STATE_STENCIL_TEST</code></li>\n<li><code>render.STATE_BLEND</code></li>\n<li><code>render.STATE_ALPHA_TEST</code> (<span class=\"icon-ios\"></span><span class=\"icon-android\"></span> not available on iOS and Android)</li>\n<li><code>render.STATE_CULL_FACE</code></li>\n<li><code>render.STATE_POLYGON_OFFSET_FILL</code></li>\n</ul>",
+					"types": [
+						"RenderState"
+					]
+				}]
+			}],
+			"disable_state": [{
+				"TargetParameterCount": 1,
+				"parameters": [{
+					"name": "state",
+					"doc": "state to disable\n<ul>\n<li><code>render.STATE_DEPTH_TEST</code></li>\n<li><code>render.STATE_STENCIL_TEST</code></li>\n<li><code>render.STATE_BLEND</code></li>\n<li><code>render.STATE_ALPHA_TEST</code> (<span class=\"icon-ios\"></span><span class=\"icon-android\"></span> not available on iOS and Android)</li>\n<li><code>render.STATE_CULL_FACE</code></li>\n<li><code>render.STATE_POLYGON_OFFSET_FILL</code></li>\n</ul>",
+					"types": [
+						"RenderState"
+					]
+				}]
+			}],
+			"set_blend_func": [{
+				"TargetParameterCount": 2,
+				"parameters": [{
+						"name": "source_factor",
+						"doc": "source factor",
+						"types": [
+							"BlendFunction"
+						]
+					},
+					{
+						"name": "destination_factor",
+						"doc": "destination factor",
+						"types": [
+							"BlendFunction"
+						]
+					}
+				]
+			}],
+			"set_depth_func": [{
+				"TargetParameterCount": 1,
+				"parameters": [{
+					"name": "func",
+					"doc": "depth test function, see the description for available values",
+					"types": [
+						"DepthFunction"
+					]
+				}]
+			}],
+			"set_stencil_func": [{
+				"TargetParameterCount": 3,
+				"parameters": [{
+						"name": "func",
+						"doc": "stencil test function, see the description for available values",
+						"types": [
+							"DepthFunction"
+						]
+					},
+					{
+						"name": "ref",
+						"doc": "reference value for the stencil test",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "mask",
+						"doc": "mask that is ANDed with both the reference value and the stored stencil value when the test is done",
+						"types": [
+							"number"
+						]
+					}
+				]
+			}],
+			"set_stencil_op": [{
+				"TargetParameterCount": 3,
+				"parameters": [{
+						"name": "sfail",
+						"doc": "action to take when the stencil test fails",
+						"types": [
+							"StencilOperator"
+						]
+					},
+					{
+						"name": "dpfail",
+						"doc": "the stencil action when the stencil test passes",
+						"types": [
+							"StencilOperator"
+						]
+					},
+					{
+						"name": "dppass",
+						"doc": "the stencil action when both the stencil test and the depth test pass, or when the stencil test passes and either there is no depth buffer or depth testing is not enabled",
+						"types": [
+							"StencilOperator"
+						]
+					}
+				]
+			}],
+			"set_cull_face": [{
+				"TargetParameterCount": 1,
+				"parameters": [{
+					"name": "face_type",
+					"doc": "face type\n<ul>\n<li><code>render.FACE_FRONT</code></li>\n<li><code>render.FACE_BACK</code></li>\n<li><code>render.FACE_FRONT_AND_BACK</code></li>\n</ul>",
+					"types": [
+						"Facetype"
+					]
+				}]
+			}]
+		}
+	}
+}

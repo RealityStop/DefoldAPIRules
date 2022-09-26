@@ -1,0 +1,13 @@
+{
+	"Name": "DataBuffer",
+	"Implements": [
+		"buffer"
+	],
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": ""
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

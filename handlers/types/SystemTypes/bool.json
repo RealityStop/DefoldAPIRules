@@ -1,0 +1,14 @@
+{
+	"Name": "bool",
+	"Specification": {
+		"Type": "CustomClass",
+		"IsSystemClass": true
+	},
+	"Implements": [
+		"boolean",
+		"bool"
+	],
+	"Handling": {
+		"Handling": "Ignore"
+  }
+}

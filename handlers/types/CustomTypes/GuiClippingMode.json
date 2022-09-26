@@ -1,0 +1,13 @@
+{
+	"Name": "ClippingMode",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"CLIPPING_MODE_NONE": 0,
+			"CLIPPING_MODE_STENCIL": 2,
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

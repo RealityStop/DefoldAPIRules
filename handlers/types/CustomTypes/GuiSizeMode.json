@@ -1,0 +1,13 @@
+{
+	"Name": "SizeMode",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"SIZE_MODE_MANUAL": 0,
+			"SIZE_MODE_AUTO": 1
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"Name": "LuaTableBase",
+	"Specification": {
+		"Type": "CustomClass",
+		"Custom": "public abstract class LuaTableBase : ILuaTable",
+		"Contents": ""
+	},
+	"Handling": {
+		"Handling": "Ignore"
+  }
+}

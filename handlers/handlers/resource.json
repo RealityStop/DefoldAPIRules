@@ -1,0 +1,91 @@
+{
+	"namespace": "resource",
+	"Overrides": {
+		"Methods": {
+			"store_resource": [{
+				"TargetParameterCount": 4,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				  "parameters": [
+					{
+					  "name": "manifest_reference",
+					  "doc": "The manifest to check against.",
+					  "types": [
+						"number"
+					  ]
+					},
+					{
+					  "name": "data",
+					  "doc": "The resource data that should be stored.",
+					  "types": [
+						"string"
+					  ]
+					},
+					{
+					  "name": "hexdigest",
+					  "doc": "The expected hash for the resource,\nretrieved through collectionproxy.missing_resources.",
+					  "types": [
+						"string"
+					  ]
+					},
+					{
+					  "name": "callback",
+					  "doc": "The callback\nfunction that is executed once the engine has been attempted to store\nthe resource.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>hexdigest</code></dt>\n<dd><span class=\"type\">string</span> The hexdigest of the resource.</dd>\n<dt><code>status</code></dt>\n<dd><span class=\"type\">boolean</span> Whether or not the resource was successfully stored.</dd>\n</dl>",
+					  "types": [
+						"function(object self, string hexdigest, boolean status)"
+					  ]
+					}
+				  ]
+			}],
+			"store_manifest": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				  "parameters": [
+					{
+					  "name": "manifest_buffer",
+					  "doc": "the binary data that represents the manifest",
+					  "types": [
+						"string"
+					  ]
+					},
+					{
+					  "name": "callback",
+					  "doc": "the callback function\nexecuted once the engine has attempted to store the manifest.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>status</code></dt>\n<dd><span class=\"type\">constant</span> the status of the store operation:</dd>\n</dl>\n<ul>\n<li><code>resource.LIVEUPATE_OK</code></li>\n<li><code>resource.LIVEUPATE_INVALID_RESOURCE</code></li>\n<li><code>resource.LIVEUPATE_VERSION_MISMATCH</code></li>\n<li><code>resource.LIVEUPATE_ENGINE_VERSION_MISMATCH</code></li>\n<li><code>resource.LIVEUPATE_SIGNATURE_MISMATCH</code></li>\n<li><code>resource.LIVEUPDATE_BUNDLED_RESOURCE_MISMATCH</code></li>\n<li><code>resource.LIVEUPDATE_FORMAT_ERROR</code></li>\n</ul>",
+					  "types": [
+						"function(object self, ResourceLiveUpdate status)"
+					  ]
+					}
+				  ]
+			}],
+			"store_archive": [{
+				"TargetParameterCount": 3,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				  "parameters": [
+        {
+          "name": "path",
+          "doc": "the path to the original file on disc",
+          "types": [
+            "string"
+          ]
+        },
+        {
+          "name": "callback",
+          "doc": "the callback function\nexecuted after the storage has completed\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>status</code></dt>\n<dd><span class=\"type\">constant</span> the status of the store operation (See resource.store_manifest)</dd>\n</dl>",
+          "types": [
+            "function(object self, ResourceLiveUpdate status)"
+          ]
+        },
+        {
+          "name": "[options]",
+          "doc": "optional table with extra parameters. Supported entries:\n<ul>\n<li><span class=\"type\">boolean</span> <code>verify</code>: if archive should be verified as well as stored (defaults to true)</li>\n</ul>",
+          "types": [
+            "table"
+          ]
+        }
+      ],
+			}]
+		}
+	}
+}

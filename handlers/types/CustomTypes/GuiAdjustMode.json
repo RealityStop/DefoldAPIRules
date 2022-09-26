@@ -1,0 +1,14 @@
+{
+	"Name": "AdjustMode",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"ADJUST_FIT": 0,
+			"ADJUST_ZOOM": 1,
+			"ADJUST_STRETCH": 2
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

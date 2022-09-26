@@ -1,0 +1,13 @@
+{
+	"Name": "string",
+	"Specification": {
+		"Type": "CustomClass",
+		"IsSystemClass": true
+	},
+	"Implements": [
+		"string"
+	],
+	"Handling": {
+		"Handling": "Ignore"
+  }
+}

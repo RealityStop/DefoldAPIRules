@@ -1,0 +1,7 @@
+{
+	"Name": "ILuaTableSerializable",
+	"Specification": {
+		"Type": "CustomInterface",
+		"Contents": "ILuaTable ToTable();"
+	},
+}

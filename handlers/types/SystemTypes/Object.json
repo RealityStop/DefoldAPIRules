@@ -1,0 +1,13 @@
+{
+	"Name": "object",
+	"Specification": {
+		"Type": "CustomClass",
+		"IsSystemClass": true
+	},
+	"Implements": [
+		"object"
+	],
+	"Handling": {
+		"Handling": "Ignore"
+  }
+}

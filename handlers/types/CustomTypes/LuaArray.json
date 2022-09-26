@@ -1,0 +1,11 @@
+{
+	"Name": "LuaArray",
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": "/// <summary>\n/// @CSharpLua.Template = \"{}\"\n/// </summary> \npublic extern LuaArray();",
+		"Custom": "public class LuaArray : LuaTableOf<int, LuaType>"
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

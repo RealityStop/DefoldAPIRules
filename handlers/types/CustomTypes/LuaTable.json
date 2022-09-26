@@ -1,0 +1,15 @@
+{
+  "Name": "LuaTable",
+  "Specification": {
+	  "Type":"CustomClass",
+    "Custom": "public class LuaTable : LuaTableOf<LuaType, LuaType>",
+	  "Contents": "/// <summary>\n/// @CSharpLua.Template = \"{}\"\n/// </summary> \npublic extern LuaTable();"
+  },
+  "Handling": {
+    "Handling": "Ignore"
+  },
+  "Implements": [
+    "constant_buffer"
+  ],
+
+}

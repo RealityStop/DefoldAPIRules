@@ -1,0 +1,81 @@
+{
+	"namespace": "go",
+	"Overrides": {
+		"Methods": {
+			"get_position": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+
+				"returnvalues": [{
+					"name": "position",
+					"doc": "instance position",
+					"types": [
+						"vector3"
+					]
+				}],
+				"parameters": [{
+					"name": "[id]",
+					"doc": "optional id of the game object instance to get the position for, by default the instance of the calling script",
+					"types": [
+						"string",
+						"hash",
+						"url",
+						"void"
+					]
+				}]
+
+			}],
+
+			"set_position": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+
+				"returnvalues": [],
+				"parameters": [{
+						"name": "position",
+						"doc": "position to set",
+						"types": [
+							"vector3"
+						]
+					},
+					{
+						"name": "[id]",
+						"doc": "optional id of the game object instance to set the position for, by default the instance of the calling script",
+						"types": [
+							"string",
+							"hash",
+							"url",
+							"void"
+						]
+					}
+				]
+
+			}],
+			"set_rotation": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+
+				"returnvalues": [],
+				"parameters": [{
+						"name": "rotation",
+						"doc": "rotation to set",
+						"types": [
+							"quaternion"
+						]
+					},
+					{
+						"name": "[id]",
+						"doc": "optional id of the game object instance to get the rotation for, by default the instance of the calling script",
+						"types": [
+							"string",
+							"hash",
+							"url",
+							"void"
+						]
+					}
+				]
+
+			}]
+		}
+	}
+}

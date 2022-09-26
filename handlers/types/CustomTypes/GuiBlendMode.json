@@ -1,0 +1,15 @@
+{
+	"Name": "BlendMode",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"BLEND_ALPHA": 0,
+			"BLEND_ADD": 1,
+			"BLEND_ADD_ALPHA": 2,
+			"BLEND_MULT": 3
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

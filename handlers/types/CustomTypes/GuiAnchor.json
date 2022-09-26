@@ -1,0 +1,14 @@
+{
+	"Name": "GuiAnchor",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"ANCHOR_NONE": 0,
+			"ANCHOR_LEFT": 1,
+			"ANCHOR_RIGHT": 2
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

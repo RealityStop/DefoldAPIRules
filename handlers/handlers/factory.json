@@ -1,0 +1,219 @@
+{
+	"namespace": "factory",
+	"Overrides": {
+		"Methods": {
+			"get_status": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "status",
+					"doc": "status of the factory component\n<ul>\n<li><code>factory.STATUS_UNLOADED</code></li>\n<li><code>factory.STATUS_LOADING</code></li>\n<li><code>factory.STATUS_LOADED</code></li>\n</ul>",
+					"types": [
+						"FactoryStatus"
+					]
+				}],
+				"parameters": [{
+					"name": "[url]",
+					"doc": "the factory component to get status from",
+					"types": [
+						"string",
+						"hash",
+						"url"
+					]
+				}]
+			}],
+			"load": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+
+				"returnvalues": [],
+				"parameters": [{
+						"name": "[url]",
+						"doc": "the factory component to load",
+						"types": [
+							"string",
+							"hash",
+							"url"
+						]
+					},
+					{
+						"name": "[complete_function]",
+						"doc": "function to call when resources are loaded.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>url</code></dt>\n<dd><span class=\"type\">url</span> url of the factory component</dd>\n<dt><code>result</code></dt>\n<dd><span class=\"type\">boolean</span> True if resources were loaded successfully</dd>\n</dl>",
+						"types": [
+							"function(object self, url url, boolean result))"
+						]
+					}
+				]
+			}],
+			"create": [{
+				"TargetParameterCount": 5,
+				"TargetReturnValueCount": 1,
+				"Variants": [{
+					"returnvalues": [{
+						"name": "id",
+						"doc": "the global id of the spawned game object",
+						"types": [
+							"hash"
+						]
+					}],
+					"parameters": [{
+						"name": "url",
+						"doc": "the factory that should create a game object.",
+						"types": [
+							"string",
+							"hash",
+							"url"
+						]
+					}]
+				},
+				{
+					"returnvalues": [{
+						"name": "id",
+						"doc": "the global id of the spawned game object",
+						"types": [
+							"hash"
+						]
+					}],
+					"parameters": [{
+							"name": "url",
+							"doc": "the factory that should create a game object.",
+							"types": [
+								"string",
+								"hash",
+								"url"
+							]
+						},
+						{
+							"name": "[position]",
+							"doc": "the position of the new game object, the position of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"vector3"
+							]
+						}
+					]
+				},
+				{
+					"returnvalues": [{
+						"name": "id",
+						"doc": "the global id of the spawned game object",
+						"types": [
+							"hash"
+						]
+					}],
+					"parameters": [{
+							"name": "url",
+							"doc": "the factory that should create a game object.",
+							"types": [
+								"string",
+								"hash",
+								"url"
+							]
+						},
+						{
+							"name": "[position]",
+							"doc": "the position of the new game object, the position of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"vector3"
+							]
+						},
+						{
+							"name": "[rotation]",
+							"doc": "the rotation of the new game object, the rotation of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"quaternion"
+							]
+						}
+					]
+				},
+				{
+					"returnvalues": [{
+						"name": "id",
+						"doc": "the global id of the spawned game object",
+						"types": [
+							"hash"
+						]
+					}],
+					"parameters": [{
+							"name": "url",
+							"doc": "the factory that should create a game object.",
+							"types": [
+								"string",
+								"hash",
+								"url"
+							]
+						},
+						{
+							"name": "[position]",
+							"doc": "the position of the new game object, the position of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"vector3"
+							]
+						},
+						{
+							"name": "[rotation]",
+							"doc": "the rotation of the new game object, the rotation of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"quaternion"
+							]
+						},
+						{
+							"name": "[properties]",
+							"doc": "the properties defined in a script attached to the new game object.",
+							"types": [
+								"table"
+							]
+						}
+					]
+				},
+				{
+					"returnvalues": [{
+						"name": "id",
+						"doc": "the global id of the spawned game object",
+						"types": [
+							"hash"
+						]
+					}],
+					"parameters": [{
+							"name": "url",
+							"doc": "the factory that should create a game object.",
+							"types": [
+								"string",
+								"hash",
+								"url"
+							]
+						},
+						{
+							"name": "[position]",
+							"doc": "the position of the new game object, the position of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"vector3"
+							]
+						},
+						{
+							"name": "[rotation]",
+							"doc": "the rotation of the new game object, the rotation of the game object calling <code>factory.create()</code> is used by default, or if the value is <code>nil</code>.",
+							"types": [
+								"quaternion"
+							]
+						},
+						{
+							"name": "[properties]",
+							"doc": "the properties defined in a script attached to the new game object.",
+							"types": [
+								"table"
+							]
+						},
+						{
+						  "name": "[scale]",
+						  "doc": "the scale of the new game object (must be greater than 0), the scale of the game object containing the factory is used by default, or if the value is <code>nil</code>",
+						  "types": [
+							"number",
+							"vector3"
+						  ]
+						}
+					]
+				}]
+			}]
+		}
+	}
+}

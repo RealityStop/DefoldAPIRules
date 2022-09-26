@@ -1,0 +1,31 @@
+{
+	"namespace": "sys",
+	"Overrides": {
+		"Methods": {
+			"get_connectivity": [{
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "status",
+					"doc": "network connectivity status:\n<ul>\n<li><code>sys.NETWORK_DISCONNECTED</code> (no network connection is found)</li>\n<li><code>sys.NETWORK_CONNECTED_CELLULAR</code> (connected through mobile cellular)</li>\n<li><code>sys.NETWORK_CONNECTED</code> (otherwise, Wifi)</li>\n</ul>",
+					"types": [
+						"SysConnectivity"
+					]
+				}]
+			}],
+			"set_error_handler": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 0,
+				"Variants": [{
+					"returnvalues": [],
+					"parameters": [{
+						"name": "error_handler",
+						"doc": "the function to be called on error\n<dl>\n<dt><code>source</code></dt>\n<dd><span class=\"type\">string</span> The runtime context of the error. Currently, this is always <code>\"lua\"</code>.</dd>\n<dt><code>message</code></dt>\n<dd><span class=\"type\">string</span> The source file, line number and error message.</dd>\n<dt><code>traceback</code></dt>\n<dd><span class=\"type\">string</span> The stack traceback.</dd>\n</dl>",
+						"types": [
+							"function(string source, string message, string traceback)"
+						]
+					}]
+				}]
+			}]
+		}
+	}
+}

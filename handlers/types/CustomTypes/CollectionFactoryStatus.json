@@ -1,0 +1,14 @@
+{
+	"Name": "FactoryStatus",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"STATUS_UNLOADED": 0,
+			"STATUS_LOADING": 1,
+			"STATUS_LOADED": 2
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

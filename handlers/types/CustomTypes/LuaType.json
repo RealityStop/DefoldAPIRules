@@ -1,0 +1,13 @@
+{
+	"Name": "LuaType",
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": "/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(Url v)\n{\n   return default;\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(Hash v)\n{\n   return default;\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(string v)\n{\n   return default;\n}\n\n      \n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(int v)\n{\n   return default;\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(float v)\n{\n   return default;\n}\n      \n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(long v)\n{\n   return default;\n}\n\n            \n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(double v)\n{\n   return default;\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(Vector2 v)\n{\n   return default;\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(Vector3 v)\n{\n   return default;\n}\n\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(Vector4 v)\n{\n   return default;\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(bool v)\n{\n   return default;\n}\n\n      \n/// <summary>\n/// @CSharpLua.Template = \"{0}\"\n/// </summary>\npublic static implicit operator LuaType(LuaTableBase v)\n{\n   return default;\n}"
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	},
+	"Implements": [
+		"any"
+	]
+}

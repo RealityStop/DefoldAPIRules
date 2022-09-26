@@ -1,0 +1,13 @@
+{
+	"Name": "PieBounds",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"PIEBOUNDS_RECTANGLE": 0,
+			"PIEBOUNDS_ELLIPSE": 1
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

@@ -1,0 +1,351 @@
+{
+	"namespace": "vmath",
+	"Overrides": {
+		"Methods": {
+			"vector": [{
+				"TargetReturnValueCount": 1,
+				"TargetParameterCount": 1,
+				"Ignore": true
+			}],
+			"lerp": [{
+				"TargetReturnValueCount": 1,
+				"TargetParameterCount": 3,
+				"Variants": [{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"vector3"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"vector3"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"vector3"
+								]
+							}
+						]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"vector4"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"vector4"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"vector4"
+								]
+							}
+						]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"quaternion"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"quaternion"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"quaternion"
+								]
+							}
+						]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"number"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"number"
+								]
+							}
+						]
+					}
+				]
+			}],
+			"slerp": [{
+				"TargetReturnValueCount": 1,
+				"TargetParameterCount": 3,
+				"Variants": [{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"vector3"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"vector3"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"vector3"
+								]
+							}
+						]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"vector4"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"vector4"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"vector4"
+								]
+							}
+						]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "the lerped vector",
+							"types": [
+								"quaternion"
+							]
+						}],
+						"parameters": [{
+								"name": "t",
+								"doc": "interpolation parameter, 0-1",
+								"types": [
+									"number"
+								]
+							},
+							{
+								"name": "v1",
+								"doc": "vector to lerp from",
+								"types": [
+									"quaternion"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "vector to lerp to",
+								"types": [
+									"quaternion"
+								]
+							}
+
+						]
+					}
+				]
+			}],
+
+			"normalize": [{
+				"TargetReturnValueCount": 1,
+				"TargetParameterCount": 1,
+				"Variants": [{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "new normalized vector",
+							"types": [
+								"vector3"
+							]
+						}],
+						"parameters": [{
+							"name": "v1",
+							"doc": "vector to normalize",
+							"types": [
+								"vector3"
+							]
+						}]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "new normalized vector",
+							"types": [
+								"vector4"
+							]
+						}],
+						"parameters": [{
+							"name": "v1",
+							"doc": "vector to normalize",
+							"types": [
+								"vector4"
+							]
+						}]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "new normalized vector",
+							"types": [
+								"quat"
+							]
+						}],
+						"parameters": [{
+							"name": "v1",
+							"doc": "vector to normalize",
+							"types": [
+								"quat"
+							]
+						}]
+					}
+
+				]
+			}],
+
+			"mul_per_elem": [{
+				"TargetReturnValueCount": 1,
+				"TargetParameterCount": 2,
+				"Variants": [{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "multiplied vector",
+							"types": [
+								"vector3"
+							]
+						}],
+						"parameters": [{
+								"name": "v1",
+								"doc": "first vector",
+								"types": [
+									"vector3"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "second vector",
+								"types": [
+									"vector3"
+								]
+							}
+						]
+					},
+					{
+						"returnvalues": [{
+							"name": "v",
+							"doc": "multiplied vector",
+							"types": [
+								"vector4"
+							]
+						}],
+						"parameters": [{
+								"name": "v1",
+								"doc": "first vector",
+								"types": [
+									"vector4"
+								]
+							},
+							{
+								"name": "v2",
+								"doc": "second vector",
+								"types": [
+									"vector4"
+								]
+							}
+						]
+					}
+
+
+				]
+			}]
+		}
+	}
+}

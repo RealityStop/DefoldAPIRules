@@ -1,0 +1,473 @@
+{
+	"namespace": "gui",
+	"Overrides": {
+		"Methods": {
+			"get_blend_mode": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "blend_mode",
+					"doc": "blend mode\n<ul>\n<li><code>gui.BLEND_ALPHA</code></li>\n<li><code>gui.BLEND_ADD</code></li>\n<li><code>gui.BLEND_ADD_ALPHA</code></li>\n<li><code>gui.BLEND_MULT</code></li>\n</ul>",
+					"types": [
+						"BlendMode"
+					]
+				}]
+			}],
+			"set_blend_mode": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set blend mode for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "blend_mode",
+						"doc": "blend mode to set\n<ul>\n<li><code>gui.BLEND_ALPHA</code></li>\n<li><code>gui.BLEND_ADD</code></li>\n<li><code>gui.BLEND_ADD_ALPHA</code></li>\n<li><code>gui.BLEND_MULT</code></li>\n</ul>",
+						"types": [
+							"BlendMode"
+						]
+					}
+				]
+			}],
+			"get_clipping_mode": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "clipping_mode",
+					"doc": "clipping mode\n<ul>\n  <li><code>gui.CLIPPING_MODE_NONE</code></li>\n  <li><code>gui.CLIPPING_MODE_STENCIL</code></li>\n</ul>",
+					"types": [
+						"ClippingMode"
+					]
+				}]
+			}],
+			"set_clipping_mode": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set clipping mode for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "clipping_mode",
+						"doc": "clipping mode to set\n<ul>\n  <li><code>gui.CLIPPING_MODE_NONE</code></li>\n  <li><code>gui.CLIPPING_MODE_STENCIL</code></li>\n</ul>",
+						"types": [
+							"ClippingMode"
+						]
+					}
+				]
+			}],
+			"get_xanchor": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "anchor",
+					"doc": "anchor constant\n<ul>\n<li><code>gui.ANCHOR_NONE</code></li>\n<li><code>gui.ANCHOR_LEFT</code></li>\n<li><code>gui.ANCHOR_RIGHT</code></li>\n</ul>",
+					"types": [
+						"GuiAnchor"
+					]
+				}]
+			}],
+			"set_xanchor": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set x-anchor for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "anchor",
+						"doc": "anchor constant\n<ul>\n<li><code>gui.ANCHOR_NONE</code></li>\n<li><code>gui.ANCHOR_LEFT</code></li>\n<li><code>gui.ANCHOR_RIGHT</code></li>\n</ul>",
+						"types": [
+							"GuiAnchor"
+						]
+					}
+				]
+			}],
+			"get_yanchor": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "anchor",
+					"doc": "anchor constant\n<ul>\n<li><code>gui.ANCHOR_NONE</code></li>\n<li><code>gui.ANCHOR_LEFT</code></li>\n<li><code>gui.ANCHOR_RIGHT</code></li>\n</ul>",
+					"types": [
+						"GuiAnchor"
+					]
+				}]
+			}],
+			"set_yanchor": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set x-anchor for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "anchor",
+						"doc": "anchor constant\n<ul>\n<li><code>gui.ANCHOR_NONE</code></li>\n<li><code>gui.ANCHOR_LEFT</code></li>\n<li><code>gui.ANCHOR_RIGHT</code></li>\n</ul>",
+						"types": [
+							"GuiAnchor"
+						]
+					}
+				]
+			}],
+			"get_pivot": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+						"name": "node",
+						"doc": "node to get pivot from",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "pivot",
+						"doc": "pivot constant\n<ul>\n  <li><code>gui.PIVOT_CENTER</code></li>\n  <li><code>gui.PIVOT_N</code></li>\n  <li><code>gui.PIVOT_NE</code></li>\n  <li><code>gui.PIVOT_E</code></li>\n  <li><code>gui.PIVOT_SE</code></li>\n  <li><code>gui.PIVOT_S</code></li>\n  <li><code>gui.PIVOT_SW</code></li>\n  <li><code>gui.PIVOT_W</code></li>\n  <li><code>gui.PIVOT_NW</code></li>\n</ul>",
+						"types": [
+							"GuiPivot"
+						]
+					}
+				]
+			}],
+			"set_pivot": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set pivot for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "pivot",
+						"doc": "pivot constant\n<ul>\n  <li><code>gui.PIVOT_CENTER</code></li>\n  <li><code>gui.PIVOT_N</code></li>\n  <li><code>gui.PIVOT_NE</code></li>\n  <li><code>gui.PIVOT_E</code></li>\n  <li><code>gui.PIVOT_SE</code></li>\n  <li><code>gui.PIVOT_S</code></li>\n  <li><code>gui.PIVOT_SW</code></li>\n  <li><code>gui.PIVOT_W</code></li>\n  <li><code>gui.PIVOT_NW</code></li>\n</ul>",
+						"types": [
+							"GuiPivot"
+						]
+					}
+				]
+			}],
+			"new_texture": [{
+				"TargetParameterCount": 6,
+				"TargetReturnValueCount": 2,
+				"returnvalues": [{
+						"name": "success",
+						"doc": "texture creation was successful",
+						"types": [
+							"boolean"
+						]
+					},
+					{
+						"name": "code",
+						"doc": "one of the gui.RESULT_* codes if unsuccessful",
+						"types": [
+							"number"
+						]
+					}
+				],
+				"parameters": [{
+						"name": "texture",
+						"doc": "texture id",
+						"types": [
+							"string",
+							"hash"
+						]
+					},
+					{
+						"name": "width",
+						"doc": "texture width",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "height",
+						"doc": "texture height",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "type",
+						"doc": "texture type\n<ul>\n<li><code>\"rgb\"</code> - RGB</li></li>\n<li><code>\"rgba\"</code> - RGBA</li></li>\n<li><code>\"l\"</code> - LUMINANCE</li></li>\n</ul>",
+						"types": [
+							"GuiTextureType"
+						]
+					},
+					{
+						"name": "buffer",
+						"doc": "texture data",
+						"types": [
+							"string"
+						]
+					},
+					{
+						"name": "flip",
+						"doc": "flip texture vertically",
+						"types": [
+							"boolean"
+						]
+					}
+				]
+			}],
+			"set_texture_data": [{
+				"TargetParameterCount": 6,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "success",
+					"doc": "setting the data was successful",
+					"types": [
+						"boolean"
+					]
+				}],
+				"parameters": [{
+						"name": "texture",
+						"doc": "texture id",
+						"types": [
+							"string",
+							"hash"
+						]
+					},
+					{
+						"name": "width",
+						"doc": "texture width",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "height",
+						"doc": "texture height",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "type",
+						"doc": "texture type\n<ul>\n  <li><code>\"rgb\"</code> - RGB</li>\n  <li><code>\"rgba\"</code> - RGBA</li>\n  <li><code>\"l\"</code> - LUMINANCE</li>\n</ul>",
+						"types": [
+							"GuiTextureType"
+						]
+					},
+					{
+						"name": "buffer",
+						"doc": "texture data",
+						"types": [
+							"string"
+						]
+					},
+					{
+						"name": "flip",
+						"doc": "flip texture vertically",
+						"types": [
+							"boolean"
+						]
+					}
+				]
+			}],
+			"set_outer_bounds": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"parameters": [{
+						"name": "node",
+						"doc": "node for which to set the outer bounds mode",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "bounds_mode",
+						"doc": "the outer bounds mode of the pie node:\n<ul>\n<li><code>gui.PIEBOUNDS_RECTANGLE</code></li>\n<li><code>gui.PIEBOUNDS_ELLIPSE</code></li>\n</ul>",
+						"types": [
+							"PieBounds"
+						]
+					}
+				]
+			}],
+			"get_outer_bounds": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"parameters": [{
+					"name": "node",
+					"doc": "node from where to get the outer bounds mode",
+					"types": [
+						"node"
+					]
+				}],
+				"returnvalues": [{
+					"name": "bounds_mode",
+					"doc": "the outer bounds mode of the pie node:\n<ul>\n<li><code>gui.PIEBOUNDS_RECTANGLE</code></li>\n<li><code>gui.PIEBOUNDS_ELLIPSE</code></li>\n</ul>",
+					"types": [
+						"PieBounds"
+					]
+				}]
+			}],
+			"get_adjust_mode": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "adjust_mode",
+					"doc": "the current adjust mode\n<ul>\n<li><code>gui.ADJUST_FIT</code></li>\n<li><code>gui.ADJUST_ZOOM</code></li>\n<li><code>gui.ADJUST_STRETCH</code></li>\n</ul>",
+					"types": [
+						"AdjustMode"
+					]
+				}],
+				"parameters": [{
+					"name": "node",
+					"doc": "node from which to get the adjust mode (node)",
+					"types": [
+						"node"
+					]
+				}]
+			}],
+			"set_adjust_mode": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set adjust mode for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "adjust_mode",
+						"doc": "adjust mode to set\n<ul>\n<li><code>gui.ADJUST_FIT</code></li>\n<li><code>gui.ADJUST_ZOOM</code></li>\n<li><code>gui.ADJUST_STRETCH</code></li>\n</ul>",
+						"types": [
+							"AdjustMode"
+						]
+					}
+				]
+			}],
+			"get_size_mode": [{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "size_mode",
+					"doc": "the current size mode\n<ul>\n<li><code>gui.SIZE_MODE_MANUAL</code></li>\n<li><code>gui.SIZE_MODE_AUTO</code></li>\n</ul>",
+					"types": [
+						"SizeMode"
+					]
+				}],
+				"parameters": [{
+					"name": "node",
+					"doc": "node from which to get the size mode (node)",
+					"types": [
+						"node"
+					]
+				}]
+			}],
+			"set_size_mode": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				"parameters": [{
+						"name": "node",
+						"doc": "node to set size mode for",
+						"types": [
+							"node"
+						]
+					},
+					{
+						"name": "size_mode",
+						"doc": "size mode to set\n<ul>\n<li><code>gui.SIZE_MODE_MANUAL</code></li>\n<li><code>gui.SIZE_MODE_AUTO</code></li>\n</ul>",
+						"types": [
+							"SizeMode"
+						]
+					}
+				]
+			}],
+			"show_keyboard": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				"parameters": [{
+						"name": "type",
+						"doc": "keyboard type\n<ul>\n<li><code>gui.KEYBOARD_TYPE_DEFAULT</code></li>\n<li><code>gui.KEYBOARD_TYPE_EMAIL</code></li>\n<li><code>gui.KEYBOARD_TYPE_NUMBER_PAD</code></li>\n<li><code>gui.KEYBOARD_TYPE_PASSWORD</code></li>\n</ul>",
+						"types": [
+							"KeyboardType"
+						]
+					},
+					{
+						"name": "autoclose",
+						"doc": "if the keyboard should automatically close when clicking outside",
+						"types": [
+							"boolean"
+						]
+					}
+				]
+			}],
+			"play_flipbook": [{
+				"TargetParameterCount": 4,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				  "parameters": [
+					{
+					  "name": "node",
+					  "doc": "node to set animation for",
+					  "types": [
+						"node"
+					  ]
+					},
+					{
+					  "name": "animation",
+					  "doc": "animation id",
+					  "types": [
+						"string",
+						"hash"
+					  ]
+					},
+					{
+					  "name": "[complete_function]",
+					  "doc": "optional function to call when the animation has completed\n<dl>\n<dt><code>self</code></dt>\n<dd>\n<span class=\"type\">object</span> The current object.\n</dd>\n<dt><code>node</code></dt>\n<dd>\n<span class=\"type\">node</span> The node that is animated.\n</dd>\n</dl>",
+					  "types": [
+						"function(object self, node node)"
+					  ]
+					},
+					{
+					  "name": "[play_properties]",
+					  "doc": "optional table with properties\n<dl>\n<dt><code>offset</code></dt>\n<dd><span class=\"type\">number</span> The normalized initial value of the animation cursor when the animation starts playing</dd>\n<dt><code>playback_rate</code></dt>\n<dd><span class=\"type\">number</span> The rate with which the animation will be played. Must be positive</dd>\n</dl>",
+					  "types": [
+						"table"
+					  ]
+					}
+				  ]
+			}],
+			"play_particlefx": [{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				  "parameters": [
+					{
+					  "name": "node",
+					  "doc": "node to play particle fx for",
+					  "types": [
+						"node"
+					  ]
+					},
+					{
+					  "name": "[emitter_state_function]",
+					  "doc": "optional callback function that will be called when an emitter attached to this particlefx changes state.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object</dd>\n<dt><code>node</code></dt>\n<dd><span class=\"type\">hash</span> The particle fx node, or <code>nil</code> if the node was deleted</dd>\n<dt><code>emitter</code></dt>\n<dd><span class=\"type\">hash</span> The id of the emitter</dd>\n<dt><code>state</code></dt>\n<dd><span class=\"type\">constant</span> the new state of the emitter:</dd>\n</dl>\n<ul>\n<li><code>particlefx.EMITTER_STATE_SLEEPING</code></li>\n<li><code>particlefx.EMITTER_STATE_PRESPAWN</code></li>\n<li><code>particlefx.EMITTER_STATE_SPAWNING</code></li>\n<li><code>particlefx.EMITTER_STATE_POSTSPAWN</code></li>\n</ul>",
+					  "types": [
+						"function(object self, hash node, hash emitter, ParticleEmitterState state)"
+					  ]
+					}
+				  ]
+			}]
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"Name": "ILuaTable",
+	"Specification": {
+		"Type": "CustomInterface"
+	},
+	"Implements": [
+		"table",
+		"predicate"
+	]
+}

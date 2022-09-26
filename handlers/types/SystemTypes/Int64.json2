@@ -1,0 +1,13 @@
+{
+	"Name": "Int64",
+	"Specification": {
+		"Type": "CustomClass",
+		"IsSystemClass": true
+	},
+	"Implements": [
+		"number"
+	],
+	"Handling": {
+		"Handling": "Ignore"
+  }
+}

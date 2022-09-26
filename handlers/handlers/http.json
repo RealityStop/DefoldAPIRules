@@ -1,0 +1,165 @@
+{
+	"namespace": "http",
+	"Overrides": {
+		"Methods": {
+			"request": [{
+				"TargetParameterCount": 6,
+				"Variants": [{
+						"returnvalues": [],
+						"parameters": [{
+								"name": "url",
+								"doc": "target url",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "method",
+								"doc": "HTTP/HTTPS method, e.g. \"GET\", \"PUT\", \"POST\" etc.",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "callback",
+								"doc": "response callback function\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The script instance</dd>\n<dt><code>id</code></dt>\n<dd><span class=\"type\">hash</span> Internal message identifier. Do not use!</dd>\n<dt><code>response</code></dt>\n<dd><span class=\"type\">table</span> The response data. Contains the fields:</dd>\n</dl>\n<ul>\n<li><span class=\"type\">number</span> <code>status</code>: the status of the response</li>\n<li><span class=\"type\">string</span> <code>response</code>: the response data (if not saved on disc)</li>\n<li><span class=\"type\">table</span> <code>headers</code>: all the returned headers</li>\n<li><span class=\"type\">string</span> <code>path</code>: the stored path (if saved to disc)</li>\n<li><span class=\"type\">string</span> <code>error</code>: if any unforeseen errors occurred (e.g. file I/O)</li>\n</ul>",
+								"types": [
+									"function(object self, hash id, ILuaTable response)"
+								]
+							}
+						]
+
+
+
+					},
+					{
+						"returnvalues": [],
+						"parameters": [{
+								"name": "url",
+								"doc": "target url",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "method",
+								"doc": "HTTP/HTTPS method, e.g. \"GET\", \"PUT\", \"POST\" etc.",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "callback",
+								"doc": "response callback function\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The script instance</dd>\n<dt><code>id</code></dt>\n<dd><span class=\"type\">hash</span> Internal message identifier. Do not use!</dd>\n<dt><code>response</code></dt>\n<dd><span class=\"type\">table</span> The response data. Contains the fields:</dd>\n</dl>\n<ul>\n<li><span class=\"type\">number</span> <code>status</code>: the status of the response</li>\n<li><span class=\"type\">string</span> <code>response</code>: the response data (if not saved on disc)</li>\n<li><span class=\"type\">table</span> <code>headers</code>: all the returned headers</li>\n<li><span class=\"type\">string</span> <code>path</code>: the stored path (if saved to disc)</li>\n<li><span class=\"type\">string</span> <code>error</code>: if any unforeseen errors occurred (e.g. file I/O)</li>\n</ul>",
+								"types": [
+									"function(object self, hash id, ILuaTable response)"
+								]
+							},
+							{
+								"name": "[headers]",
+								"doc": "optional table with custom headers",
+								"types": [
+									"table"
+								]
+							}
+						]
+
+
+
+					},
+					{
+						"returnvalues": [],
+						"parameters": [{
+								"name": "url",
+								"doc": "target url",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "method",
+								"doc": "HTTP/HTTPS method, e.g. \"GET\", \"PUT\", \"POST\" etc.",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "callback",
+								"doc": "response callback function\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The script instance</dd>\n<dt><code>id</code></dt>\n<dd><span class=\"type\">hash</span> Internal message identifier. Do not use!</dd>\n<dt><code>response</code></dt>\n<dd><span class=\"type\">table</span> The response data. Contains the fields:</dd>\n</dl>\n<ul>\n<li><span class=\"type\">number</span> <code>status</code>: the status of the response</li>\n<li><span class=\"type\">string</span> <code>response</code>: the response data (if not saved on disc)</li>\n<li><span class=\"type\">table</span> <code>headers</code>: all the returned headers</li>\n<li><span class=\"type\">string</span> <code>path</code>: the stored path (if saved to disc)</li>\n<li><span class=\"type\">string</span> <code>error</code>: if any unforeseen errors occurred (e.g. file I/O)</li>\n</ul>",
+								"types": [
+									"function(object self, hash id, ILuaTable response)"
+								]
+							},
+							{
+								"name": "[headers]",
+								"doc": "optional table with custom headers",
+								"types": [
+									"table"
+								]
+							},
+							{
+								"name": "[post_data]",
+								"doc": "optional data to send",
+								"types": [
+									"string"
+								]
+							}
+						]
+
+
+
+					},
+					{
+						"returnvalues": [],
+						"parameters": [{
+								"name": "url",
+								"doc": "target url",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "method",
+								"doc": "HTTP/HTTPS method, e.g. \"GET\", \"PUT\", \"POST\" etc.",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "callback",
+								"doc": "response callback function\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The script instance</dd>\n<dt><code>id</code></dt>\n<dd><span class=\"type\">hash</span> Internal message identifier. Do not use!</dd>\n<dt><code>response</code></dt>\n<dd><span class=\"type\">table</span> The response data. Contains the fields:</dd>\n</dl>\n<ul>\n<li><span class=\"type\">number</span> <code>status</code>: the status of the response</li>\n<li><span class=\"type\">string</span> <code>response</code>: the response data (if not saved on disc)</li>\n<li><span class=\"type\">table</span> <code>headers</code>: all the returned headers</li>\n<li><span class=\"type\">string</span> <code>path</code>: the stored path (if saved to disc)</li>\n<li><span class=\"type\">string</span> <code>error</code>: if any unforeseen errors occurred (e.g. file I/O)</li>\n</ul>",
+								"types": [
+									"function(object self, hash id, ILuaTable response)"
+								]
+							},
+							{
+								"name": "[headers]",
+								"doc": "optional table with custom headers",
+								"types": [
+									"table"
+								]
+							},
+							{
+								"name": "[post_data]",
+								"doc": "optional data to send",
+								"types": [
+									"string"
+								]
+							},
+							{
+								"name": "[options]",
+								"doc": "optional table with request parameters. Supported entries:\n<ul>\n<li><span class=\"type\">number</span> <code>timeout</code>: timeout in seconds</li>\n<li><span class=\"type\">string</span> <code>path</code>: path on disc where to download the file. Only overwrites the path if status is 200</li>\n<li><span class=\"type\">boolean</span> <code>ignore_cache</code>: don't return cached data if we get a 304</li>\n<li><span class=\"type\">boolean</span> <code>chunked_transfer</code>: use chunked transfer encoding for https requests larger than 16kb. Defaults to true.</li>\n</ul>",
+								"types": [
+									"table"
+								]
+							}
+						]
+
+
+
+					}
+				]
+			}]
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"Name": "SysConnectivity",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"NETWORK_DISCONNECTED": 0,
+			"NETWORK_CONNECTED": 1,
+			"NETWORK_CONNECTED_CELLULAR": 2
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

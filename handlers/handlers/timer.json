@@ -1,0 +1,45 @@
+{
+	"namespace": "timer",
+	"Overrides": {
+		"Methods": {
+			"delay" : [{
+				"TargetParameterCount" :3,
+				"TargetReturnValueCount" :1,
+				
+					"returnvalues": [
+					{
+					  "name": "",
+					  "doc": "handle identifier for the create timer, returns timer.INVALID_TIMER_HANDLE if the timer can not be created",
+					  "types": [
+						"hash"
+					  ]
+					}
+				  ],
+				  "parameters": [
+					{
+					  "name": "delay",
+					  "doc": "time interval in seconds",
+					  "types": [
+						"number"
+					  ]
+					},
+					{
+					  "name": "repeat",
+					  "doc": "true = repeat timer until cancel, false = one-shot timer",
+					  "types": [
+						"boolean"
+					  ]
+					},
+					{
+					  "name": "callback",
+					  "doc": "timer callback function\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object</dd>\n<dt><code>handle</code></dt>\n<dd><span class=\"type\">number</span> The handle of the timer</dd>\n<dt><code>time_elapsed</code></dt>\n<dd><span class=\"type\">number</span> The elapsed time - on first trigger it is time since timer.delay call, otherwise time since last trigger</dd>\n</dl>",
+					  "types": [
+						"function(object self, hash handle, number timerDelay)"
+					  ]
+					}
+				]
+				
+			}]
+		}
+	}
+}

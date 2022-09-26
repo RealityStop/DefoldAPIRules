@@ -1,0 +1,13 @@
+{
+	"Name": "BufferStream",
+	"Implements": [
+		"bufferstream"
+	],
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": ""
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

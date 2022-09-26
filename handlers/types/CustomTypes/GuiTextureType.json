@@ -1,0 +1,10 @@
+{
+	"Name": "GuiTextureType",
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": ""
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

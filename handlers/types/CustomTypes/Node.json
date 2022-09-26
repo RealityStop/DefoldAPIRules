@@ -1,0 +1,13 @@
+{
+	"Name": "Node",
+	"Implements": [
+		"node"
+	],
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": ""
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

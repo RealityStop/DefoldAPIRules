@@ -1,0 +1,14 @@
+{
+	"Name": "float",
+	"Specification": {
+		"Type": "CustomClass",
+		"IsSystemClass": true
+	},
+	"Implements": [
+		"number",
+		"float"
+	],
+	"Handling": {
+		"Handling": "Ignore"
+  }
+}
