@@ -1,0 +1,59 @@
+{
+	"namespace": "msg",
+	"Overrides": {
+		"Methods": {
+			"get_connectivity": [{
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "status",
+					"doc": "network connectivity status:\n<ul>\n<li><code>sys.NETWORK_DISCONNECTED</code> (no network connection is found)</li>\n<li><code>sys.NETWORK_CONNECTED_CELLULAR</code> (connected through mobile cellular)</li>\n<li><code>sys.NETWORK_CONNECTED</code> (otherwise, Wifi)</li>\n</ul>",
+					"types": [
+						"SysConnectivity"
+					]
+				}]
+			}],
+			"url": [{
+				"TargetParameterCount": 3,
+				"TargetReturnValueCount": 1,
+				"Variants":[{
+					"returnvalues": [
+					{
+					  "name": "url",
+					  "doc": "a new URL",
+					  "types": [
+						"url"
+					  ]
+					}
+				  ],
+				  "parameters": [
+					{
+					  "name": "socket",
+					  "doc": "socket of the URL",
+					  "types": [
+						"string",
+						"hash"
+					  ]
+					},
+					{
+					  "name": "path",
+					  "doc": "path of the URL",
+					  "types": [
+						"string",
+						"hash"
+					  ]
+					},
+					{
+					  "name": "[fragment]",
+					  "doc": "fragment of the URL",
+					  "types": [
+						"string",
+						"hash"
+					  ]
+					}
+				  ]
+								
+				}]
+			}]
+		}
+	}
+}
