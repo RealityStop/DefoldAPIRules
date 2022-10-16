@@ -4,4 +4,7 @@
 		"Type": "CustomInterface",
 		"Contents": "ILuaTable ToTable();"
 	},
+	"Handling": {
+		"Handling": "None"
+	}
 }
