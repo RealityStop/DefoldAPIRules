@@ -1,51 +1,63 @@
 {
-	"namespace": "collectionfactory",
-	"Overrides": {
-		"Methods": {
-			"get_status": [{
-				"TargetParameterCount": 1,
-				"TargetReturnValueCount": 1,
-				"returnvalues": [{
-					"name": "status",
-					"doc": "status of the collection factory component\n<ul>\n<li><code>collectionfactory.STATUS_UNLOADED</code></li>\n<li><code>collectionfactory.STATUS_LOADING</code></li>\n<li><code>collectionfactory.STATUS_LOADED</code></li>\n</ul>",
-					"types": [
-						"FactoryStatus"
-					]
-				}],
-				"parameters": [{
-					"name": "[url]",
-					"doc": "the collection factory component to get status from",
-					"types": [
-						"string",
-						"hash",
-						"url"
-					]
-				}]
-			}],
-			"load": [{
-				"TargetParameterCount": 2,
-				"TargetReturnValueCount": 0,
-				"Variants": [{
-					"returnvalues": [],
-					"parameters": [{
-							"name": "[url]",
-							"doc": "the collection factory component to load",
-							"types": [
-								"string",
-								"hash",
-								"url"
-							]
-						},
-						{
-							"name": "[complete_function]",
-							"doc": "function to call when resources are loaded.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>url</code></dt>\n<dd><span class=\"type\">url</span> url of the collection factory component</dd>\n<dt><code>result</code></dt>\n<dd><span class=\"type\">boolean</span> True if resource were loaded successfully</dd>\n</dl>",
-							"types": [
-								"function(object self, url url, boolean result))"
-							]
-						}
-					]
-				}]
-			}]
-		}
-	}
+  "namespace": "collectionfactory",
+  "Overrides": {
+    "Methods": {
+      "get_status": [
+        {
+          "TargetParameterCount": 1,
+          "TargetReturnValueCount": 1,
+          "returnvalues": [
+            {
+              "name": "status",
+              "doc": "status of the collection factory component\n<ul>\n<li><code>collectionfactory.STATUS_UNLOADED</code></li>\n<li><code>collectionfactory.STATUS_LOADING</code></li>\n<li><code>collectionfactory.STATUS_LOADED</code></li>\n</ul>",
+              "types": [
+                "FactoryStatus"
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "name": "[url]",
+              "doc": "the collection factory component to get status from",
+              "types": [
+                "string",
+                "hash",
+                "url"
+              ]
+            }
+          ]
+        }
+      ],
+      "load": [
+        {
+          "TargetParameterCount": 2,
+          "TargetReturnValueCount": 0,
+          "Variants": [
+            {
+              "returnvalues": [],
+              "parameters": [
+                {
+                  "name": "[url]",
+                  "doc": "the collection factory component to load",
+                  "types": [
+                    "string",
+                    "hash",
+                    "url"
+                  ]
+                },
+                {
+                  "name": "[complete_function]",
+                  "doc": "function to call when resources are loaded.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>url</code></dt>\n<dd><span class=\"type\">url</span> url of the collection factory component</dd>\n<dt><code>result</code></dt>\n<dd><span class=\"type\">boolean</span> True if resource were loaded successfully</dd>\n</dl>",
+                  "types": [
+                    "function(object self, url url, boolean result))"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "CustomContent": "\n\n\n\npublic readonly struct CollectionFactoryCreateResult\n{\n   public readonly Hash RelativeHash;\n   public readonly Hash UniqueHash;\n\n\n   public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)\n   {\n      RelativeHash = relativeHash;\n      UniqueHash = uniqueHash;\n   }\n}\n\npublic FactoryStatus Status => Get_status(this);\n\n\npublic LuaTableOf<Hash, Hash> Create()\n{\n   return (dynamic)Create(this);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position)\n{\n   return (dynamic)Create(this, position);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation)\n{\n   return (dynamic)Create(this, position, rotation);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, ILuaTable properties)\n{\n   return (dynamic)Create(this, position, rotation, properties);\n}"
 }

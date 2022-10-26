@@ -1,0 +1,47 @@
+{
+  "namespace": "sprite",
+  "Overrides": {
+    "Methods": {
+      "play_flipbook": [
+        {
+          "TargetParameterCount": 4,
+          "TargetReturnValueCount": 0,
+          "returnvalues": [],
+          "parameters": [
+            {
+              "name": "url",
+              "doc": "the sprite that should play the animation",
+              "types": [
+                "string",
+                "hash",
+                "url"
+              ]
+            },
+            {
+              "name": "id",
+              "doc": "hash name hash of the animation to play",
+              "types": [
+                "hash"
+              ]
+            },
+            {
+              "name": "[complete_function]",
+              "doc": "function to call when the animation has completed.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>message_id</code></dt>\n<dd><span class=\"type\">hash</span> The name of the completion message, <code>\"animation_done\"</code>.</dd>\n<dt><code>message</code></dt>\n<dd><span class=\"type\">table</span> Information about the completion:</dd>\n</dl>\n<ul>\n<li><span class=\"type\">number</span> <code>current_tile</code> - the current tile of the sprite.</li>\n<li><span class=\"type\">hash</span> <code>id</code> - id of the animation that was completed.</li>\n</ul>\n<dl>\n<dt><code>sender</code></dt>\n<dd><span class=\"type\">url</span> The invoker of the callback: the sprite component.</dd>\n</dl>",
+              "types": [
+                "function(object self, hash message_id, table message, url sender))"
+              ]
+            },
+            {
+              "name": "[play_properties]",
+              "doc": "optional table with properties:\n<dl>\n<dt><code>offset</code></dt>\n<dd><span class=\"type\">number</span> the normalized initial value of the animation cursor when the animation starts playing.</dd>\n<dt><code>playback_rate</code></dt>\n<dd><span class=\"type\">number</span> the rate with which the animation will be played. Must be positive.</dd>\n</dl>",
+              "types": [
+                "table"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "CustomContent": "\n\n//Cacheables\nprivate bool _cachedFlipHorizontal;\nprivate bool _cachedFlipVertical;\n\n\npublic bool FlipHorizontal\n{\n   get\n   {\n      if (IsCachingEnabled)\n         return _cachedFlipHorizontal;\n\n      throw new NotImplementedException(\"defold API does not provide for querying a sprite's flip state\");\n   }\n   set\n   {\n      if (IsCachingEnabled)\n         _cachedFlipHorizontal = value;\n\n      Set_hflip(this, value);\n   }\n}\n\n\npublic bool FlipVertical\n{\n   get\n   {\n      if (IsCachingEnabled)\n         return _cachedFlipVertical;\n\n      throw new NotImplementedException(\"defold API does not provide for querying a sprite's flip state\");\n   }\n   set\n   {\n      if (IsCachingEnabled)\n         _cachedFlipVertical = value;\n\n      Set_vflip(this, value);\n   }\n}\n\n\n\npublic Vector2 Size => (dynamic)Go.Get(this, \"size\");\n\npublic Vector2 Scale\n{\n   get => (dynamic)Go.Get(this, \"scale\");\n   set => Go.Set(this, \"scale\", (LuaType) value);\n}\n\npublic Hash Image\n{\n   get => (dynamic)Go.Get(this, \"image\");\n   set => Go.Set(this, \"image\", value);\n}\n\npublic Hash Material\n{\n   get => (dynamic)Go.Get(this, \"material\");\n   set => Go.Set(this, \"material\", value);\n}\n   \npublic double Cursor\n{\n   get => (dynamic)Go.Get(this, \"cursor\");\n   set => Go.Set(this, \"cursor\", value);\n}\n         \npublic double PlaybackRate\n{\n   get => (dynamic)Go.Get(this, \"playback_rate\");\n   set => Go.Set(this, \"playback_rate\", value);\n}\n\npublic Hash Animation => (dynamic)Go.Get(this, \"animation\");\n\n\npublic void PlayFlipbook(Hash animation, Action<Sprite, Hash, ILuaTable, Url> onComplete = null,\n   ILuaTable playProperties = null)\n{\n   void callback(object target, Hash hash, ILuaTable table, Url url)\n   {\n      onComplete(this, hash, table, url);\n   }\n      \n   Play_flipbook(this, animation, callback, playProperties);\n}"
+}
