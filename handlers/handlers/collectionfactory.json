@@ -1,5 +1,6 @@
 {
   "namespace": "collectionfactory",
+  "BaseClass": "BuiltInComponentBase",
   "Overrides": {
     "Methods": {
       "get_status": [
@@ -59,5 +60,5 @@
       ]
     }
   },
-  "CustomContent": "\n\n\n\npublic readonly struct CollectionFactoryCreateResult\n{\n   public readonly Hash RelativeHash;\n   public readonly Hash UniqueHash;\n\n\n   public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)\n   {\n      RelativeHash = relativeHash;\n      UniqueHash = uniqueHash;\n   }\n}\n\npublic FactoryStatus Status => Get_status(this);\n\n\npublic LuaTableOf<Hash, Hash> Create()\n{\n   return (dynamic)Create(this);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position)\n{\n   return (dynamic)Create(this, position);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation)\n{\n   return (dynamic)Create(this, position, rotation);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, ILuaTable properties)\n{\n   return (dynamic)Create(this, position, rotation, properties);\n}"
+  "CustomContent": "\n\n\n\npublic readonly struct CollectionFactoryCreateResult\n{\n   public readonly Hash RelativeHash;\n   public readonly Hash UniqueHash;\n\n\n   public CollectionFactoryCreateResult(Hash relativeHash, Hash uniqueHash)\n   {\n      RelativeHash = relativeHash;\n      UniqueHash = uniqueHash;\n   }\n}\n\npublic FactoryStatus Status => get_status(this);\n\n\npublic LuaTableOf<Hash, Hash> Create()\n{\n   return (dynamic)create(this);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position)\n{\n   return (dynamic)create(this, position);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation)\n{\n   return (dynamic)create(this, position, rotation);\n}\n   \npublic LuaTableOf<Hash, Hash> Create(Vector3 position, Quaternion rotation, ILuaTable properties)\n{\n   return (dynamic)create(this, position, rotation, properties);\n}"
 }
