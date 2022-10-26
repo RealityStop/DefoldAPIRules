@@ -3,6 +3,79 @@
 	"Overrides": {
 		"Methods": {
 
+			"get": [{
+				"TargetParameterCount": 3,
+				"TargetReturnValueCount": 1,
+				"returnvalues": [{
+					"name": "value",
+					"doc": "the value of the specified property",
+					"types": [
+						"any"
+					]
+				}],
+				"parameters": [{
+						"name": "url",
+						"doc": "url of the game object or component having the property",
+						"types": [
+							"string",
+							"hash",
+							"url"
+						]
+					},
+					{
+						"name": "property",
+						"doc": "id of the property to retrieve",
+						"types": [
+							"string",
+							"hash"
+						]
+					},
+					{
+						"name": "[options]",
+						"doc": "(optional) options table\n- index <span class=\"type\">integer</span> index into array property (1 based)\n- key <span class=\"type\">hash</span> name of internal property",
+						"types": [
+							"table"
+						]
+					}
+				]
+			}],
+			"set": [{
+				"TargetParameterCount": 4,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				"parameters": [{
+						"name": "url",
+						"doc": "url of the game object or component having the property",
+						"types": [
+							"string",
+							"hash",
+							"url"
+						]
+					},
+					{
+						"name": "property",
+						"doc": "id of the property to set",
+						"types": [
+							"string",
+							"hash"
+						]
+					},
+					{
+						"name": "value",
+						"doc": "the value to set",
+						"types": [
+							"any"
+						]
+					},
+					{
+						"name": "[options]",
+						"doc": "(optional) options table\n- index <span class=\"type\">integer</span> index into array property (1 based)\n- key <span class=\"type\">hash</span> name of internal property",
+						"types": [
+							"table"
+						]
+					}
+				]
+			}]
 		}
 	}
 }
