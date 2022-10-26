@@ -1,50 +1,60 @@
 {
-	"namespace": "factory",
-	"Overrides": {
-		"Methods": {
-			"get_status": [{
-				"TargetParameterCount": 1,
-				"TargetReturnValueCount": 1,
-				"returnvalues": [{
-					"name": "status",
-					"doc": "status of the factory component\n<ul>\n<li><code>factory.STATUS_UNLOADED</code></li>\n<li><code>factory.STATUS_LOADING</code></li>\n<li><code>factory.STATUS_LOADED</code></li>\n</ul>",
-					"types": [
-						"FactoryStatus"
-					]
-				}],
-				"parameters": [{
-					"name": "[url]",
-					"doc": "the factory component to get status from",
-					"types": [
-						"string",
-						"hash",
-						"url"
-					]
-				}]
-			}],
-			"load": [{
-				"TargetParameterCount": 2,
-				"TargetReturnValueCount": 0,
-
-				"returnvalues": [],
-				"parameters": [{
-						"name": "[url]",
-						"doc": "the factory component to load",
-						"types": [
-							"string",
-							"hash",
-							"url"
-						]
-					},
-					{
-						"name": "[complete_function]",
-						"doc": "function to call when resources are loaded.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>url</code></dt>\n<dd><span class=\"type\">url</span> url of the factory component</dd>\n<dt><code>result</code></dt>\n<dd><span class=\"type\">boolean</span> True if resources were loaded successfully</dd>\n</dl>",
-						"types": [
-							"function(object self, url url, boolean result))"
-						]
-					}
-				]
-			}]
-		}
-	}
+  "namespace": "factory",
+  "BaseClass": "BuiltInComponentBase",
+  "Overrides": {
+    "Methods": {
+      "get_status": [
+        {
+          "TargetParameterCount": 1,
+          "TargetReturnValueCount": 1,
+          "returnvalues": [
+            {
+              "name": "status",
+              "doc": "status of the factory component\n<ul>\n<li><code>factory.STATUS_UNLOADED</code></li>\n<li><code>factory.STATUS_LOADING</code></li>\n<li><code>factory.STATUS_LOADED</code></li>\n</ul>",
+              "types": [
+                "FactoryStatus"
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "name": "[url]",
+              "doc": "the factory component to get status from",
+              "types": [
+                "string",
+                "hash",
+                "url"
+              ]
+            }
+          ]
+        }
+      ],
+      "load": [
+        {
+          "TargetParameterCount": 2,
+          "TargetReturnValueCount": 0,
+          "returnvalues": [],
+          "parameters": [
+            {
+              "name": "[url]",
+              "doc": "the factory component to load",
+              "types": [
+                "string",
+                "hash",
+                "url"
+              ]
+            },
+            {
+              "name": "[complete_function]",
+              "doc": "function to call when resources are loaded.\n<dl>\n<dt><code>self</code></dt>\n<dd><span class=\"type\">object</span> The current object.</dd>\n<dt><code>url</code></dt>\n<dd><span class=\"type\">url</span> url of the factory component</dd>\n<dt><code>result</code></dt>\n<dd><span class=\"type\">boolean</span> True if resources were loaded successfully</dd>\n</dl>",
+              "types": [
+                "function(object self, url url, boolean result))"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "CustomContent": "\n/// <summary>\n/// Calling this function when the factory is not marked as dynamic loading always returns\n/// factory.STATUS_LOADED.\n/// </summary>\npublic FactoryStatus Status => get_status(this);\n\n\n/// <summary>\n/// This decreases the reference count for each resource loaded with factory.load. If reference is zero, the resource is destroyed.\n/// Calling this function when the factory is not marked as dynamic loading does nothing.\n/// </summary>\npublic void Unload() => unload(this);\n\n\n/// <summary>\n/// Resources are referenced by the factory component until the existing (parent) collection is destroyed or factory.unload is called.\n/// Calling this function when the factory is not marked as dynamic loading does nothing.\n/// </summary>\npublic void Load() => load(this);\n\n\npublic void Load(Action<object, Factory, bool> callback)\n{\n   void IntermediateCallback(object obj, Url url, bool b)\n   {\n      callback(obj, this, b);\n   }\n\n   load(this, IntermediateCallback);\n}\n\n\npublic Hash Create()\n{\n   return (dynamic)create(this);\n}\n\n\npublic Hash Create(Vector3 position)\n{\n   return (dynamic)create(this, position);\n}\n\n\npublic Hash Create(Vector3 position, Quaternion rotation)\n{\n   return (dynamic)create(this, position, rotation);\n}\n\n\npublic Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties)\n{\n   return (dynamic)create(this, position, rotation, properties);\n}\n\n\npublic Hash Create(Vector3 position, Quaternion rotation, ILuaTable properties, double scale)\n{\n   return (dynamic)create(this, position, rotation, properties, scale);\n}"
 }
