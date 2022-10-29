@@ -1,6 +1,7 @@
 {
   "namespace": "collectionfactory",
   "BaseClass": "BuiltInComponentBase",
+  "ClassName": "CollectionFactory",
   "Overrides": {
     "Methods": {
       "get_status": [
