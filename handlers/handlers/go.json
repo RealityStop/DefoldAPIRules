@@ -75,7 +75,38 @@
 						]
 					}
 				]
-			}]
+			}],
+		
+			"init":[{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 0,
+				"Ignore" : true
+			}],
+			"final":[{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 0,
+				"Ignore" : true
+			}],
+			"update":[{
+				"TargetParameterCount": 2,
+				"TargetReturnValueCount": 0,
+				"Ignore" : true
+			}],
+			"on_message":[{
+				"TargetParameterCount": 4,
+				"TargetReturnValueCount": 0,
+				"Ignore" : true
+			}],
+			"on_input":[{
+				"TargetParameterCount": 4,
+				"TargetReturnValueCount": 0,
+				"Ignore" : true
+			}],
+			"on_reload":[{
+				"TargetParameterCount": 1,
+				"TargetReturnValueCount": 0,
+				"Ignore" : true
+			}],
 		}
 	}
 }
