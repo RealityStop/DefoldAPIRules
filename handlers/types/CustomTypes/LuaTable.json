@@ -2,7 +2,7 @@
   "Name": "LuaTable",
   "Specification": {
 	  "Type":"CustomClass",
-    "Custom": "public class LuaTable : LuaTableOf<LuaType, LuaType>",
+    "Custom": "public class LuaTable : LuaTableOf<LuaType, LuaType>, ILuaType",
 	  "Contents": "/// <summary>\n/// @CSharpLua.Template = \"{}\"\n/// </summary> \npublic extern LuaTable();"
   },
   "Handling": {

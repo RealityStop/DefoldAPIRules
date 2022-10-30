@@ -5,7 +5,8 @@
 	],
 	"Specification": {
 		"Type": "CustomClass",
-		"Contents": "public int socket;\n   public Hash path;\n   public Hash fragment;\n\n   /// <summary>\n   /// @CSharpLua.Template = \"msg.url()\"\n   /// </summary>\n   public Url()\n   {\n   }\n\n   /// <summary>\n   /// @CSharpLua.Template = \"msg.url({0})\"\n   /// </summary>\n   public Url(string url)\n   {\n   }"
+		"Custom" : "public class Url : ILuaType",
+		"Contents": "public Hash socket;\npublic Hash path;\npublic Hash fragment;\n\n/// <summary>\n/// @CSharpLua.Template = \"msg.url()\"\n   /// </summary>\npublic Url()\n{\n}\n\n/// <summary>\n/// @CSharpLua.Template = \"msg.url({0})\"\n/// </summary>\npublic Url(string url)\n{\n}"
 	},
 	"Handling": {
 		"Handling": "None"
