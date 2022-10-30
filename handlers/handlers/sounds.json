@@ -1,5 +1,6 @@
 {
   "namespace": "sound",
+  "BaseClass": "BuiltInComponentBase",
   "Overrides": {
     "Methods": {
       "play": [
