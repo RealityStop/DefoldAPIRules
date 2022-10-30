@@ -99,7 +99,12 @@
 			}],
 			"on_input":[{
 				"TargetParameterCount": 4,
-				"TargetReturnValueCount": 0,
+				"TargetReturnValueCount": 1,
+				"Ignore" : true
+			},
+			{
+				"TargetParameterCount": 3,
+				"TargetReturnValueCount": 1,
 				"Ignore" : true
 			}],
 			"on_reload":[{
