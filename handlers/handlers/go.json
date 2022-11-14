@@ -76,42 +76,113 @@
 					}
 				]
 			}],
-		
-			"init":[{
+
+			"animate": [{
+				"TargetParameterCount": 8,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				"parameters": [{
+						"name": "url",
+						"doc": "url of the game object or component having the property",
+						"types": [
+							"string",
+							"hash",
+							"url"
+						]
+					},
+					{
+						"name": "property",
+						"doc": "id of the property to animate",
+						"types": [
+							"string",
+							"hash"
+						]
+					},
+					{
+						"name": "playback",
+						"doc": "playback mode of the animation\n<ul>\n<li><code>go.PLAYBACK_ONCE_FORWARD</code></li>\n<li><code>go.PLAYBACK_ONCE_BACKWARD</code></li>\n<li><code>go.PLAYBACK_ONCE_PINGPONG</code></li>\n<li><code>go.PLAYBACK_LOOP_FORWARD</code></li>\n<li><code>go.PLAYBACK_LOOP_BACKWARD</code></li>\n<li><code>go.PLAYBACK_LOOP_PINGPONG</code></li>\n</ul>",
+						"types": [
+							"PlaybackMode"
+						]
+					},
+					{
+						"name": "to",
+						"doc": "target property value",
+						"types": [
+							"number",
+							"vector3",
+							"vector4",
+							"quaternion"
+						]
+					},
+					{
+						"name": "easing",
+						"doc": "easing to use during animation. Either specify a constant, see the <a href=\"/manuals/animation#_easing\">animation guide</a> for a complete list, or a vmath.vector with a curve",
+						"types": [
+							"Easing",
+							"vector"
+						]
+					},
+					{
+						"name": "duration",
+						"doc": "duration of the animation in seconds",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "[delay]",
+						"doc": "delay before the animation starts in seconds",
+						"types": [
+							"number"
+						]
+					},
+					{
+						"name": "[complete_function]",
+						"doc": "optional function to call when the animation has completed\n<dl>\n<dt><code>self</code></dt>\n<dd>\n<span class=\"type\">object</span> The current object.\n</dd>\n<dt><code>url</code></dt>\n<dd>\n<span class=\"type\">url</span> The game object or component instance for which the property is animated.\n</dd>\n<dt><code>property</code></dt>\n<dd>\n<span class=\"type\">hash</span> The id of the animated property.\n</dd>\n</dl>",
+						"types": [
+							"function(object self, Url url, Hash property)"
+						]
+					}
+				]
+			}],
+
+			"init": [{
 				"TargetParameterCount": 1,
 				"TargetReturnValueCount": 0,
-				"Ignore" : true
+				"Ignore": true
 			}],
-			"final":[{
+			"final": [{
 				"TargetParameterCount": 1,
 				"TargetReturnValueCount": 0,
-				"Ignore" : true
+				"Ignore": true
 			}],
-			"update":[{
+			"update": [{
 				"TargetParameterCount": 2,
 				"TargetReturnValueCount": 0,
-				"Ignore" : true
+				"Ignore": true
 			}],
-			"on_message":[{
+			"on_message": [{
 				"TargetParameterCount": 4,
 				"TargetReturnValueCount": 0,
-				"Ignore" : true
+				"Ignore": true
 			}],
-			"on_input":[{
-				"TargetParameterCount": 4,
-				"TargetReturnValueCount": 1,
-				"Ignore" : true
-			},
-			{
-				"TargetParameterCount": 3,
-				"TargetReturnValueCount": 1,
-				"Ignore" : true
-			}],
-			"on_reload":[{
+			"on_input": [{
+					"TargetParameterCount": 4,
+					"TargetReturnValueCount": 1,
+					"Ignore": true
+				},
+				{
+					"TargetParameterCount": 3,
+					"TargetReturnValueCount": 1,
+					"Ignore": true
+				}
+			],
+			"on_reload": [{
 				"TargetParameterCount": 1,
 				"TargetReturnValueCount": 0,
-				"Ignore" : true
-			}],
+				"Ignore": true
+			}]
 		}
 	}
 }

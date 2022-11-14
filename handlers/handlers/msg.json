@@ -1,5 +1,6 @@
 {
 	"namespace": "msg",
+	"CustomContent" : "public const string DefaultSocket = null;",
 	"Overrides": {
 		"Methods": {
 			"get_connectivity": [{
