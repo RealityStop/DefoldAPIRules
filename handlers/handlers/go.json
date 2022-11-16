@@ -102,7 +102,7 @@
 						"name": "playback",
 						"doc": "playback mode of the animation\n<ul>\n<li><code>go.PLAYBACK_ONCE_FORWARD</code></li>\n<li><code>go.PLAYBACK_ONCE_BACKWARD</code></li>\n<li><code>go.PLAYBACK_ONCE_PINGPONG</code></li>\n<li><code>go.PLAYBACK_LOOP_FORWARD</code></li>\n<li><code>go.PLAYBACK_LOOP_BACKWARD</code></li>\n<li><code>go.PLAYBACK_LOOP_PINGPONG</code></li>\n</ul>",
 						"types": [
-							"PlaybackMode"
+							"GoPlaybackMode"
 						]
 					},
 					{

@@ -467,7 +467,74 @@
 					  ]
 					}
 				  ]
-			}]
+			}],
+			
+			"animate": [{
+				"TargetParameterCount": 8,
+				"TargetReturnValueCount": 0,
+				"returnvalues": [],
+				"parameters": [
+					{
+					  "name": "node",
+					  "doc": "node to animate",
+					  "types": [
+						"node"
+					  ]
+					},
+					{
+					  "name": "property",
+					  "doc": "property to animate\n<ul>\n<li><code>\"position\"</code></li>\n<li><code>\"rotation\"</code></li>\n<li><code>\"scale\"</code></li>\n<li><code>\"color\"</code></li>\n<li><code>\"outline\"</code></li>\n<li><code>\"shadow\"</code></li>\n<li><code>\"size\"</code></li>\n<li><code>\"fill_angle\"</code> (pie)</li>\n<li><code>\"inner_radius\"</code> (pie)</li>\n<li><code>\"slice9\"</code> (slice9)</li>\n</ul>\nThe following property constants are defined equaling the corresponding property string names.\n<ul>\n<li><code>gui.PROP_POSITION</code></li>\n<li><code>gui.PROP_ROTATION</code></li>\n<li><code>gui.PROP_SCALE</code></li>\n<li><code>gui.PROP_COLOR</code></li>\n<li><code>gui.PROP_OUTLINE</code></li>\n<li><code>gui.PROP_SHADOW</code></li>\n<li><code>gui.PROP_SIZE</code></li>\n<li><code>gui.PROP_FILL_ANGLE</code></li>\n<li><code>gui.PROP_INNER_RADIUS</code></li>\n<li><code>gui.PROP_SLICE9</code></li>\n</ul>",
+					  "types": [
+						"string"
+					  ]
+					},
+					{
+					  "name": "to",
+					  "doc": "target property value",
+					  "types": [
+						"number",
+						"vector3",
+						"vector4"
+					  ]
+					},
+					{
+					  "name": "easing",
+					  "doc": "easing to use during animation.\n     Either specify one of the <code>gui.EASING_*</code> constants or provide a\n     <span class=\"type\">vector</span> with a custom curve. See the <a href=\"/manuals/animation#_easing\">animation guide</a> for more information.",
+					  "types": [
+						"Easing",
+						"vector"
+					  ]
+					},
+					{
+					  "name": "duration",
+					  "doc": "duration of the animation in seconds.",
+					  "types": [
+						"number"
+					  ]
+					},
+					{
+					  "name": "[delay]",
+					  "doc": "delay before the animation starts in seconds.",
+					  "types": [
+						"number"
+					  ]
+					},
+					{
+					  "name": "[complete_function]",
+					  "doc": "function to call when the\n     animation has completed",
+					  "types": [
+						"function(object self, Node node)"
+					  ]
+					},
+					{
+					  "name": "[playback]",
+					  "doc": "playback mode\n<ul>\n<li><code>gui.PLAYBACK_ONCE_FORWARD</code></li>\n<li><code>gui.PLAYBACK_ONCE_BACKWARD</code></li>\n<li><code>gui.PLAYBACK_ONCE_PINGPONG</code></li>\n<li><code>gui.PLAYBACK_LOOP_FORWARD</code></li>\n<li><code>gui.PLAYBACK_LOOP_BACKWARD</code></li>\n<li><code>gui.PLAYBACK_LOOP_PINGPONG</code></li>\n</ul>",
+					  "types": [
+						"GuiPlaybackMode"
+					  ]
+					}
+				  ]
+			}],
 		}
 	}
 }

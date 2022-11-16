@@ -1,5 +1,5 @@
 {
-	"Name": "PlaybackMode",
+	"Name": "GoPlaybackMode",
 	"Specification": {
 		"Type": "CustomEnum",
 		"Values": {
