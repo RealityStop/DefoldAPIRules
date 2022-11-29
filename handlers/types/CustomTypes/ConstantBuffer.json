@@ -1,0 +1,13 @@
+{
+	"Name": "ConstantBuffer",
+	"Implements": [
+		"constant_buffer"
+	],
+	"Specification": {
+		"Type": "CustomClass",
+		"Contents": ""
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

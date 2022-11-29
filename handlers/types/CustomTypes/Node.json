@@ -5,7 +5,7 @@
   ],
   "Specification": {
     "Type": "CustomClass",
-    "Contents": "/// <summary>\n    /// @CSharpLua.Template = \"gui.set_enabled({this}, {0})\"\n    /// </summary>\n    public extern void SetEnabled(bool enabled);\n}\n\npublic class NodeProxy\n{\n    private Node _proxy;\n\n\n    internal void __assignproxy__(Node proxy)\n    {\n        _proxy = proxy;\n    }\n    \n    public static implicit operator Node(NodeProxy p)\n    {\n        return p._proxy;\n    }\n}\n\npublic class TextNode : NodeProxy\n{\n    public string GetText()\n    {\n        return Gui.get_text(this);\n    }\n\n\n    public void SetText(string text)\n    {\n        Gui.set_text(this, text);\n    }\n}\n\npublic class ButtonNode : NodeProxy\n{\n "
+    "Contents": "/// <summary>\n/// @CSharpLua.Template = \"gui.set_enabled({this}, {0})\"\n/// </summary>\npublic extern void SetEnabled(bool enabled);\n}\n\npublic class NodeProxy\n{\n    private Node _proxy;\n\n\n    internal void __assignproxy__(Node proxy)\n    {\n        _proxy = proxy;\n    }\n    \n    public static implicit operator Node(NodeProxy p)\n    {\n        return p._proxy;\n    }\n}\n\npublic class TextNode : NodeProxy\n{\n    public string GetText()\n    {\n        return Gui.get_text(this);\n    }\n\n\n    public void SetText(string text)\n    {\n        Gui.set_text(this, text);\n    }\n}\n\npublic class ButtonNode : NodeProxy\n{\n "
   },
   "Handling": {
     "Handling": "Ignore"

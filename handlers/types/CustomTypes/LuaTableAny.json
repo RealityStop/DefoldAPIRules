@@ -1,7 +1,7 @@
 {
-	"Name": "LuaTableBase",
+	"Name": "LuaTable",
 	"Generate" : false,
-	"DirectionRestriction" : "ParameterOnly",
+	"DirectionRestriction" : "ReturnOnly",
 	"Specification": {
 		"Type": "CustomClass"
 	},

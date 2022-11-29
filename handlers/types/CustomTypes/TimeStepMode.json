@@ -1,0 +1,13 @@
+{
+	"Name": "TimeStepMode",
+	"Specification": {
+		"Type": "CustomEnum",
+		"Values": {
+			"Continuous" : 0,
+			"Discrete" : 1
+		}
+	},
+	"Handling": {
+		"Handling": "Ignore"
+	}
+}

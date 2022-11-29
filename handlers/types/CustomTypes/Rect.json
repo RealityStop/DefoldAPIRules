@@ -1,0 +1,13 @@
+{
+  "Name": "Rect",
+  "Implements": [
+    "rect"
+  ],
+  "Specification": {
+    "Type": "CustomClass",
+    "Contents": "public double X, Y;\npublic double Width, Height;\n\n\npublic Rect(double x, double y, double width, double height)\n{\n\tX = x;\n\tY = y;\n\tWidth = width;\n\tHeight = height;\n}\n\n\npublic bool InRect(int targetX, int targetY)\n{\n\treturn X <= targetX && targetX <= (X + Width) &&\n\t       Y <= targetY && targetY <= (Y + Height);\n}"
+  },
+  "Handling": {
+    "Handling": "Ignore"
+  }
+}

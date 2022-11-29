@@ -109,6 +109,29 @@
 						"Facetype"
 					]
 				}]
+			}],
+			"predicate": [{
+				"TargetReturnValueCount": 1,
+				"TargetParameterCount": 1,
+				"returnvalues": [
+					{
+					  "name": "predicate",
+					  "doc": "new predicate",
+					  "types": [
+						"predicate"
+					  ]
+					}
+				  ],
+				  "parameters": [
+					{
+					  "name": "tags",
+					  "doc": "table of tags that the predicate should match. The tags can be of either hash or string type",
+					  "types": [
+						"table",
+						"literal:LuaArrayOf<string>"
+					  ]
+					}
+				  ],
 			}]
 		}
 	}
